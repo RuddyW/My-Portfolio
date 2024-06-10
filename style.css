@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@500&display=swap&effect=shadow-multiple|3d');
+
+*{
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(48, 50, 59, 1);
+}
+
+/*********************HEADER*********************/
+header{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+  position: fixed;
+  padding: 1.3rem;
+  margin: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.header-nav .logo a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+
+}
+
+.logo img{
+  width: 50px;
+}
+
+.logo h1{
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.logo h1 span{
+  color: rgb(52, 86, 139);
+  transition: .5s;
+  z-index: 1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo h1 span:hover{
+  color:white;
+}
+
+.header-nav .navigation a{
+  margin-left: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 5px 15px;
+  color: white;
+  transition: .3s ease-out;
+  z-index: 1;
+}
+
+.header-nav .navigation a:hover{
+  color: rgb(52, 86, 139);
+}
+
+.btn{
+  background: rgb(28, 46, 74);
+  border: 2px none;
+  font-size: 1.3rem;
+  border-radius: 100px;
+  transition: .5s;
+}
+
+.btn:hover{
+  background: transparent;
+}
+
+/*********************NAVIGATION*********************/
+.togglenav{
+  display: none;
+}
+
+.checkbtn{
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 50px;
+  display: none;
+  z-index: 1;
+}
+
+#check{
+  display: none;
+}
+
+.dropdown{
+  display: none;
+}
+
+.dropdown a{
+  color:#111;
+  display: none;
+}
+
+/*********************FOOTER*********************/
+footer{
+  max-width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+footer .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+footer .content .icons{
+  padding: 1.3rem;
+  margin: auto;
+  font-size: 1.6rem;
+}
+
+footer .content .icons a{
+  cursor: pointer;
+  background-color: rgb(52, 86, 139);
+  border-radius: 100%;
+  padding: 10px;
+  color: white;
+  transition: all .3s ease;
+  font-weight: 500;
+}
+
+footer .content .icons a:hover{
+  background-color: white;
+  color: rgb(52, 86, 139);
+  font-weight: 600;
+}
+
+footer .content .footer-nav{
+  padding: 1.3rem;
+  margin: auto;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .content .footer-nav nav a{
+  color: white;
+  text-decoration: none;
+  padding: 0 5px;
+  margin-left: 4px;
+  transition: all .3s ease;
+}
+
+footer .content .footer-nav nav a:hover{
+  text-decoration: underline;
+  color: rgb(52, 86, 139);;
+}
+
+.copyright{
+  font-size: 20px;
+  text-align: center;
+  background-color: black;
+  color: rgb(52, 86, 139);
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.copyright span{
+  color: white;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.copyright span:hover{
+  color: rgb(52, 86, 139);
+}
+
+/****************************PAGE 1****************************/
+/*********************INTRO PAGE*********************/
+.section-1{
+  max-width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: black;
+  
+}
+
+.section-1 .intro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100vh;
+  padding: 1.5rem;
+}
+
+.section-1 .intro{
+  margin: 5px;
+}
+
+.section-1 .intro .greeting h2{
+  font-size: 2.0rem;
+  color: rgb(52, 86, 139);
+  font-family: 'Poppins', sans-serif;
+  /*
+  -webkit-box-reflect: below 1px liner-gradient(transparent, #0004);
+  line-height: 0.69em;
+  outline: none;
+  animation: animate 5s linear infinite;*/
+}
+
+/*@keyframes animate{
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+    color: rgb(52, 86, 139);
+    box-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+    color: aliceblue;
+    text-shadow: 0 0 10px rgb(52, 86, 139),
+    0 0 20px rgb(52, 86, 139),
+    0 0 40px rgb(52, 86, 139),
+    0 0 60px rgb(52, 86, 139),
+    0 0 80px rgb(52, 86, 139),
+    0 0 160px rgb(52, 86, 139);
+  }
+}*/
+
+.section-1 .intro .greeting h3{
+  font-size: 2.5rem;
+  color: rgb(52, 86, 139);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-1 .intro .greeting span{
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-1 .intro .greeting{
+  color: aliceblue;
+}
+
+.section-1 .intro .greeting .explore{
+  margin: 40px 0;
+  padding: 10px 60px;
+  border: 1px solid white;
+  border-radius: 100px;
+  align-items: center;
+  font-size: 1.3rem;
+  background: transparent;
+  outline: wheat;
+  color: rgb(52, 86, 139);
+  transition: all .3s ease;
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-1 .intro .greeting .explore:hover{
+  color: aliceblue;
+  box-shadow: 0 5px 50px 0 rgb(52, 86, 139) inset, 0 5px 50px 0 rgb(52, 86, 139),
+              0 5px 50px 0 rgb(52, 86, 139) inset, 0 5px 50px 0 rgb(52, 86, 139);
+  text-shadow: 0 0 5px 50px rgb(52, 86, 139), 0 0 5px 50px rgb(52, 86, 139);
+}
+
+.section-1 .intro img{
+  max-width: 60%;
+}
+
+/*********************ABOUT SECTION*********************/
+.section-2{
+  max-width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(48, 50, 59, 1);
+}
+
+.section-2 .about-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100vh;
+  padding: 1.5rem;
+}
+
+.section-2 .about-section .about-me{
+  text-align: center;
+  padding: 1.3rem;
+}
+
+.section-2 .about-section .about-me h2{
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(52, 86, 139);
+  margin-bottom: 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.section-2 .about-section .about-me span{
+  font-size: 1.2rem;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-2 .about-section img{
+  max-width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 30px;
+}
+
+/**about section 2**/
+.section-2-2{
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(100%);
+}
+
+.section-2-2 .details{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-2-2 .details h2{
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(52, 86, 139);
+}
+
+.section-2-2 .details a{
+  background: rgb(52, 86, 139);
+  border-radius: 30px;
+  border: none;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  transition: .6s ease-in-out;
+}
+
+.section-2-2 .details a:hover{
+  color: rgb(52, 86, 139);
+  background: transparent;
+  font-weight: 800;
+}
+
+/*********************SERVICE SECTION*********************/
+.section-3{ 
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(48, 50, 59, 1);
+}
+
+.section-3 .header{
+  color: white;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 10px;
+  padding: 1.1rem;
+}
+
+.section-3 .services{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 1.1rem;
+}
+
+.services .card{
+  background: #2727272a;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all .3s ease;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.services .card:hover{
+  background-color: #323232;
+  border-color: white;
+}
+
+.services .card span{
+  display: inline-block;
+  background: rgb(52, 86, 139);
+  padding: 2px 9px;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  border-radius: 5px;
+}
+
+.services .card h4{
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services .card p{
+  text-align: left;
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.services .card .hire{
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: left;
+  transition: all .3s ease;
+}
+
+.services .card .hire:hover{
+  color: rgb(52, 86, 139);
+}
+
+/**services section 2**/
+.section-3-2{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+  background: linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
+}
+
+.section-3-2 .intro {
+  margin-bottom: 2rem;
+}
+
+.section-3-2 .intro .header{
+  font-size: 2.0rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px;
+  padding: 1.1rem;
+  text-transform: uppercase;
+}
+
+.section-3-2 .intro span{
+  color: white;
+  font-size: 1.3rem;
+  margin: 10px;
+  padding: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-3-2 .pricing{
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: .6rem;
+  margin: 0;
+
+}
+
+.pricing .card{
+  padding: 3rem 2rem;
+  background: #2727272a;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all .3s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.pricing .card:hover{
+  background-color: #323232;
+  border-color: white;
+}
+.pricing .card h4{
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.pricing .card .content{
+  flex: 1;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.pricing .card h3{
+  color: white;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 2px solid white;
+}
+
+.pricing .card p{
+  margin-bottom: 0.80rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pricing .card p i{
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.pricing .card button{
+  background: transparent;
+  border: 2px solid white;
+  padding: 1rem 1.6rem;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all .3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pricing .card button:hover{
+  background-color:  rgb(52, 86, 139);
+  cursor: pointer;
+}
+
+/*********************Projects SECTION*********************/
+
+
+/****************************PAGE 2****************************/
+/*********************Projects Page*********************/
+.section-5{
+  max-width: 100%;
+  height: 100vh;
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+.section-5 h2{
+  font-size: 2rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+/****************************MEDIA QUERY****************************/
+@media (max-width: 800px){
+  .header-nav .options{
+    display: none;
+  }
+
+  /********nav bar*********/
+  .togglenav{
+    display: block;
+  }
+  
+  .checkbtn{
+    display: block;
+  }
+  
+  .checkbtn:hover{
+    color: rgb(28, 46, 74);
+  }
+  
+  .dropdown{
+    position: fixed;
+    width: 100%;
+    top: 10%;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    padding-top: 1.5rem;
+    margin: auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: transparent;
+    backdrop-filter: blur(50px);
+  }
+  
+  .dropdown li a{
+    padding: 1.3rem;
+    font-size: 1.2em;
+    font-weight: 599;
+    color: white;
+  }
+  
+  .dropdown .btn{
+    background: rgb(28, 46, 74);
+    border: 2px none;
+    border-radius: 15px;
+    transition: .5s;
+  }
+  
+  .dropdown .btn:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+  }
+  
+  .dropdown li a:hover{
+    transition: 1s ease-out;
+    color: rgb(28, 46, 74);
+  }
+  
+  #check:checked ~ .dropdown{
+    display: block;
+  }
+  
+  #check:checked ~ .dropdown li a{
+    display: block;
+  }
+
+  /*****footer******/
+  footer .content{
+    padding: 1.3rem;
+    margin: 0;
+  }
+  
+  footer .content .icons{
+    padding: .9rem;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  footer .content .icons a{
+    padding: 10px;
+    font-weight: 500;
+  }
+  
+  footer .content .icons a:hover{
+    font-weight: 600;
+  }
+  
+  footer .content .footer-nav{
+    padding: 1.1rem;
+    margin: auto;
+    font-size: 1.0rem;
+  }
+  
+  footer .content .footer-nav nav a{
+    padding: 0 5px;
+    margin-left: 2px;
+  }
+
+  .copyright{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .copyright span{
+    font-weight: 600;
+  }
+
+  /****Section-1 intro****/
+  .section-1 .intro{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .section-1 .intro .greeting{
+    text-align: center;
+  }
+
+  .section-1 .intro .greeting h3{
+     font-size: 2.2rem;
+     margin-bottom: 20px;
+  }
+
+  .section-1 .intro .greeting span{
+   font-size: 1.1rem;
+  }
+
+  .section-1 .intro .greeting .explore{
+    padding: 13px 60px;
+    font-size: 1.3rem;
+    width: 80%;
+  }
+
+  .section-1 .intro{
+    padding: 1.1rem;
+  }
+
+  .section-1 .intro{
+    margin: 2px;
+  }
+
+  /****Section-2 about****/
+  .section-2 .about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .section-2 .about-section .about-me{
+    text-align: center;
+    padding: 1rem;
+    margin: 2px;
+  }
+
+  .section-2 .about-section .about-me h2{
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+  }
+
+  .section-2 .about-section .about-me span{
+    font-size: 1.1rem;
+  }
+
+  .section-2 .about-section img{
+    max-width: 100%;
+  }
+
+  /**about section 2**/
+  .section-2-2 .details h2{
+    font-size: 3.1rem;
+  }
+
+  .section-2-2 .details a{
+    border-radius: 30px;
+    font-size: 1.3rem;
+  }
+
+  .section-2-2 .details a:hover{
+    font-weight: 600;
+  }
+
+  .section-3-2 .pricing{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section-3-2 .intro .header{
+    font-size: 1.8rem;
+  }
+
+  /**service section 1**/
+  .section-3 .services{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /**service section 2**/
+  .section-3-2 .intro span{
+    color: rgb(52, 86, 139);
+    font-size: 1.3rem;
+    margin: 2px;
+    padding: 0;
+  }
+
+  .section-3-2 .pricing{
+    grid-template-columns: repeat(1, 1fr)
+  }
+}
